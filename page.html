@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCTC Service Grid</title>
+    
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(0, 255, 153); 
+        }
+
+        
+        .services-container {
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f0f0;
+            
+        }
+
+       
+        .services-title {
+            font-size: 32px; 
+            font-weight: bold;
+            margin-bottom: 40px;
+            line-height: 1.4;
+            color: #e35858; 
+        }
+
+        .highlight {
+            color: #000;
+            background-color: #3b3d3e; 
+            padding: 0 8px;
+            border-radius: 2px;
+            white-space: nowrap;
+        }
+
+        
+        .services-grid {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto 50px;
+            display: grid;
+           
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px 10px;
+            max-width: 900px; 
+        }
+
+       
+        .service-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .service-link {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: color 0.3s;
+            text-transform: uppercase;
+        }
+
+        .service-link:hover {
+            color: #007bff;  
+        }
+
+        
+        .service-icon {
+            width: 70px; 
+            height: 70px;
+            border: 1px solid #f1e3e3; 
+            border-radius: 50%;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px; 
+            color: #333;
+            transition: border-color 0.3s, color 0.3s;
+        }
+
+        .service-link:hover .service-icon {
+            border-color: #007bff;
+            color: #007bff;
+        }
+
+        
+        .flights::before { content: "\2708"; } 
+        .hotels::before { content: "\2302"; } 
+        .rail-drishti::before { content: "\2318"; } 
+        .e-catering::before { content: "\1F37D"; } 
+        .bus::before { content: "\1F68C"; } 
+        .holiday-packages::before { content: "\26F1"; } 
+        .tourist-train::before { content: "\1F682"; } 
+        .hill-railways::before { content: "\26F0"; } 
+        .charter-train::before { content: "\1F683"; } 
+        .gallery::before { content: "\1F5BC"; }
+
+
+        .service-name {
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        
+        .banner {
+            background-color: #c71616; 
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: left;
+            line-height: 1.5;
+            border-radius: 4px;
+        }
+
+        
+        @media (max-width: 950px) {
+            .services-grid {
+                
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .services-grid {
+                
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .services-title {
+                font-size: 24px;
+            }
+            .service-icon {
+                width: 60px;
+                height: 60px;
+            }
+            .service-name {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="services-container">
+        <h2 class="services-title">
+            Have you not found the right one? <br>
+            Find a service <span>suitable</span> for you here.
+        </h2>
+
+        <ul class="services-grid">
+            <li class="service-item">
+                <a href="#" class="service-link">
+                    <div class="service-icon flights"></div>
+                    <span class="service-name">FLIGHTS</span>
+                </a>
+            </li>
+            <li class="service-item">
+                <a href="#" class="service-link">
+                    <div class="service-icon hotels"></div>
+                    <span class="service-name">HOTELS</span>
+                </a>
+            </li>
+            <li class="service-item">
+                <a href="#" class="service-link">
+                    <div class="service-icon rail-drishti"></div>
+                    <span class="service-name">RAIL DRISHTI</span>
+                </a>
+            </li>
+            <li class="service-item">
+                <a href="#" class="service-link">
+                    <div class="service-icon e-catering"></div>
+                    <span class="service-name">E-CATERING</span>
+                </a>
+            </li>
+            <li class="service-item">
+                <a href="#" class="service-link">
+                    <div class="service-icon bus"></div>
+                    <span class="service-name">BUS</span>
+                </a>
+            </li>
+            <li class="service-item">
+                <a href="#" class="service-link">
+                    <div class="service-icon holiday-packages"></div>
+                    <span class="service-name">HOLIDAY PACKAGES</span>
+                </a>
+            </li>
+            <li class="service-item">
+                <a href="#" class="service-link">
+                    <div class="service-icon tourist-train"></div>
+                    <span class="service-name">TOURIST TRAIN</span>
+                </a>
+            </li>
+            <li class="service-item">
+                <a href="#" class="service-link">
+                    <div class="service-icon hill-railways"></div>
+                    <span class="service-name">HILL RAILWAYS</span>
+                </a>
+            </li>
+            <li class="service-item">
+                <a href="#" class="service-link">
+                    <div class="service-icon charter-train"></div>
+                    <span class="service-name">CHARTER TRAIN</span>
+                </a>
+            </li>
+            <li class="service-item">
+                <a href="#" class="service-link">
+                    <div class="service-icon gallery"></div>
+                    <span class="service-name">GALLERY</span>
+                </a>
+            </li>
+        </ul>
+        
+        
+        
+        </div>
+
+</body>
+</html>
